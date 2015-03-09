@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Contribution placeilive.com
+title:placeilive.com
 modal-id: 3
 date: 2015-01-16
 img: circus.png
