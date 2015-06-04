@@ -419,6 +419,19 @@ footer .footer-below {
     line-height: 45px;
 }
 
+
+.btn-social_pic {
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+    border: 2px solid #fff;
+    border-radius: 100%;
+    text-align: center;
+    font-size: 30px;
+    line-height: 45px;
+}
+
+
 .btn:focus,
 .btn:active,
 .btn.active {
