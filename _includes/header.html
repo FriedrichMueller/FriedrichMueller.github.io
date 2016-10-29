@@ -1,17 +1,27 @@
     <!-- Header -->
     <header  style="margin-top: 105px;" >
       
-           <div align="center">
-			<div   style="background-image:url(img/Titel.png); background-size: cover; height:400px; padding:0px; border:3px solid black;">
+            <div  id="map" style="height:400px; border:3px solid black"></div>
+			<!--<div   style="background-image:url(img/Titel.png); width:100% auto; height:400px; border:3px solid black;"> -->
                <div class="col-lg-13" >  
 				
                    <!-- <img class="img-responsive" src="img/profile.png" alt=""> -->
                     <div class="intro-text" >
-                        <span class="name"><font style="BACKGROUND-COLOR: #18bc9c">Friedrich Müller</font></span>
-                        <span class="skills"><font color="#2c3e50" style="BACKGROUND-COLOR: #18bc9c"><b>Geoinformation Scientist*Engineer of Surveying and Geoinformatics</b></font></span>
+                        <span class="name">Friedrich Müller</span>
+                        <span class="skills"><font color="#2c3e50"><b>Geoinformation Scientist*Engineer of Surveying and Geoinformatics*Geospecialist</b></font></span>
 						<hr class="world-light">
 					</div>
                 </div>
-            </div>
-       </div>
+            
+       
     </header>
+	
+		<script>
+			// create the map object and set the cooridnates of the initial view:
+			var layer = new L.StamenTileLayer("toner");
+			var map = new L.Map("map", {
+				center: new L.LatLng( 51.545483, 9.905548),
+				zoom: 14
+			});
+map.addLayer(layer);
+		</script>
