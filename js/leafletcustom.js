@@ -27,7 +27,7 @@ $( "#contents" ).scroll(function() {
           // This creates numerical icons to match the ID numbers
           // OR remove the next 6 lines for default blue Leaflet markers
           var numericMarker = L.AwesomeMarkers.icon({
-				icon: 'spinner',
+				icon: 'fa-spinner',
 				markerColor: 'orange'
 				});
           layer.setIcon(numericMarker);
