@@ -2,7 +2,7 @@
 			var layer = new L.StamenTileLayer("toner");
 			var map = new L.Map("map", {
 				center: new L.LatLng(47.644952,9.396864),
-				zoom: 10
+				zoom: 8
 			});
 			map.addLayer(layer);
 
