@@ -5,7 +5,7 @@
 			"properties" : {
 				"id" : 1,
 				"chapter" : "Bodensee",
-				"zoom" : 15,
+				"zoom" : 10,
 				"image" : "img/Bod.png",
 				"source-credit" : "Satellitenaufnahme vom Bodensee * from Nasa World Wind - Free Satellite Image  by https://commons.wikimedia.org/wiki/User:Ulamm on Wikipedia under Public Domain (https://en.wikipedia.org/wiki/en:Public_domain)",
 				"source-link" : "https://de.wikipedia.org/wiki/Bodensee#/media/File:Bodensee_satellit%2Btext.png",
