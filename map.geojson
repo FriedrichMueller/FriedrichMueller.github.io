@@ -6,14 +6,14 @@
 				"id" : 1,
 				"chapter" : "Bodensee",
 				"zoom" : 15,
-				"image" : "img/Bod.jpg",
+				"image" : "img/Bod.png",
 				"source-credit" : "Satellitenaufnahme vom Bodensee * from Nasa World Wind - Free Satellite Image  by https://commons.wikimedia.org/wiki/User:Ulamm on Wikipedia under Public Domain (https://en.wikipedia.org/wiki/en:Public_domain)",
 				"source-link" : "https://de.wikipedia.org/wiki/Bodensee#/media/File:Bodensee_satellit%2Btext.png",
 				"description" : "Deepest lake in Germany max. ~251m"
 			},
 			"geometry" : {
 				"type" : "Point",
-				"coordinates" : [9.396864,47.644952] 
+				"coordinates" : [9.396864,47.644952]
 			}
 		}, {
 			"type" : "Feature",
