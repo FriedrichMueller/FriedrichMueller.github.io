@@ -12,12 +12,12 @@
     <script type="text/javascript">
     var screensize = window.matchMedia("(max-width: 500px)")
 
-		function showWindow() {
+		function showWindow(screensize) {
 			let info_window = document.getElementById("changelog-window");
 			let changelog_content = document.getElementById("changelog-content");
 			info_window.style.display = "block";
 			if (changelog_content.style.display == "none"){
-				maximizeWindow();
+				maximizeWindow(screensize);
 			};
 		}
 
@@ -198,7 +198,7 @@
 	  <!-- div changelog -->
       <div class="changelog-window" id="changelog-window">
         <div class="changelog-header" id="changelog-header">
-          <div class="changelog-title" id="changelog-title"  data-toggle="tooltip" data-placement="bottom" title="Was finde ich wo?">Was finde ich wo?</div><div class="glyphicon glyphicon-unchecked pull-right changelog-max" id="changelog-max" onclick="maximizeWindow();" data-toggle="tooltip" data-placement="bottom" title="Maximieren"></div><div class="glyphicon glyphicon-minus pull-right changelog-min" id="changelog-min" onclick="minimizeWindow();" data-toggle="tooltip" data-placement="bottom" title="Minimieren"></div><div class="glyphicon glyphicon-remove pull-right changelog-remove" id="changelog-remove" onclick="hideWindow();" data-toggle="tooltip" data-placement="bottom" title="Schließen"></div>
+          <div class="changelog-title" id="changelog-title"  data-toggle="tooltip" data-placement="bottom" title="Was finde ich wo?">Was finde ich wo?</div><div class="glyphicon glyphicon-unchecked pull-right changelog-max" id="changelog-max" onclick="maximizeWindow(screensize);" data-toggle="tooltip" data-placement="bottom" title="Maximieren"></div><div class="glyphicon glyphicon-minus pull-right changelog-min" id="changelog-min" onclick="minimizeWindow(screensize);" data-toggle="tooltip" data-placement="bottom" title="Minimieren"></div><div class="glyphicon glyphicon-remove pull-right changelog-remove" id="changelog-remove" onclick="hideWindow();" data-toggle="tooltip" data-placement="bottom" title="Schließen"></div>
         </div>
         <div class="changelog-content" id="changelog-content">
           <p>
