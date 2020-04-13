@@ -10,6 +10,8 @@
 	<!-- for info dialog -->
 
     <script type="text/javascript">
+    var screensize = window.matchMedia("(max-width: 500px)")
+
 		function showWindow() {
 			let info_window = document.getElementById("changelog-window");
 			let changelog_content = document.getElementById("changelog-content");
@@ -24,34 +26,52 @@
 			info_window.style.display = "none";
 		}
 
-		function maximizeWindow() {
+		function maximizeWindow(screensize) {
 			let changelog_window = document.getElementById("changelog-window");
 			let changelog_content = document.getElementById("changelog-content");
 			let changelog_header = document.getElementById("changelog-header");
 			let changelog_title = document.getElementById("changelog-title");
 			let changelog_min = document.getElementById("changelog-min");
 			let changelog_max = document.getElementById("changelog-max");
-			changelog_max.style.display = "none";
-			changelog_min.style.display = "block";
-			changelog_content.style.display = "block";
-			changelog_window.style.width = "400px";
-			changelog_header.style.width = "400px";
-			changelog_title.style.width = "360px";
+      if (screensize.matches) {
+        changelog_max.style.display = "none";
+        changelog_min.style.display = "block";
+        changelog_content.style.display = "block";
+        changelog_window.style.width = "400px";
+        changelog_header.style.width = "400px";
+        changelog_title.style.width = "360px";
+      }else{
+  			changelog_max.style.display = "none";
+  			changelog_min.style.display = "block";
+  			changelog_content.style.display = "block";
+  			changelog_window.style.width = "350px";
+  			changelog_header.style.width = "350px";
+  			changelog_title.style.width = "320px";
+      }
 		}
 
-		function minimizeWindow() {
+		function minimizeWindow(screensize) {
 			let changelog_window = document.getElementById("changelog-window");
 			let changelog_content = document.getElementById("changelog-content");
 			let changelog_header = document.getElementById("changelog-header");
 			let changelog_title = document.getElementById("changelog-title");
 			let changelog_min = document.getElementById("changelog-min");
 			let changelog_max = document.getElementById("changelog-max");
-			changelog_min.style.display = "none";
-			changelog_content.style.display = "none";
-			changelog_max.style.display = "block";
-			changelog_title.style.width = "117px";
-			changelog_header.style.width = "157px";
-		    changelog_window.style.width = "157px";
+      if (screensize.matches) {
+        changelog_min.style.display = "none";
+  			changelog_content.style.display = "none";
+  			changelog_max.style.display = "block";
+  			changelog_title.style.width = "117px";
+  			changelog_header.style.width = "157px";
+  		  changelog_window.style.width = "157px";
+      }else{
+  			changelog_min.style.display = "none";
+  			changelog_content.style.display = "none";
+  			changelog_max.style.display = "block";
+  			changelog_title.style.width = "117px";
+  			changelog_header.style.width = "157px";
+  		  changelog_window.style.width = "157px";
+      }
 		}
 	 </script>
 		<style>
@@ -126,10 +146,10 @@
 
        @media only screen and (min-device-width : 0px) and (max-device-width: 500px) {
       .changelog-window,.changelog-header {
-       width: 370px;
+       width: 350px;
         }
       .changelog-title{
-      width:340px;
+      width:320px;
       }
       }
 
