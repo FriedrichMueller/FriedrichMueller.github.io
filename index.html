@@ -12,12 +12,13 @@
     <script type="text/javascript">
     var screensize = window.matchMedia("(max-width: 500px)")
 
-		function showWindow(screensize) {
+		function showWindow() {
 			let info_window = document.getElementById("changelog-window");
 			let changelog_content = document.getElementById("changelog-content");
 			info_window.style.display = "block";
 			if (changelog_content.style.display == "none"){
-				maximizeWindow(screensize);
+        var scrsize = window.matchMedia("(max-width: 500px)")
+				maximizeWindow(scrsize);
 			};
 		}
 
