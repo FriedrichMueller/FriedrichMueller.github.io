@@ -9,247 +9,375 @@
 
 	<!-- for info dialog -->
 
-    <script type="text/javascript">
-    var screensize = window.matchMedia("(max-width: 500px)")
+  <script type="text/javascript">
+ 		function showWindow() {
+ 			let info_window = document.getElementById
+ ("changelog-window");
+ 			let changelog_content = document.getElementById
+ ("changelog-content");
+ 			info_window.style.display = "block";
+ 			if (changelog_content.style.display == "none"){
+ 				maximizeWindow();
+ 			};
+ 		}
 
-		function showWindow() {
-			let info_window = document.getElementById("changelog-window");
-			let changelog_content = document.getElementById("changelog-content");
-			info_window.style.display = "block";
-			if (changelog_content.style.display == "none"){
-        var scrsize = window.matchMedia("(max-width: 500px)")
-				maximizeWindow(scrsize);
-			};
-		}
+ 		function hideWindow() {
+ 			let info_window = document.getElementById
+ ("changelog-window");
+ 			info_window.style.display = "none";
+ 		}
 
-		function hideWindow() {
-			let info_window = document.getElementById("changelog-window");
-			info_window.style.display = "none";
-		}
+ 		function maximizeWindow() {
+ 			let changelog_window = document.getElementById
+ ("changelog-window");
+ 			let changelog_content = document.getElementById
+ ("changelog-content");
+ 			let changelog_header = document.getElementById
+ ("changelog-header");
+ 			let changelog_title = document.getElementById
+ ("changelog-title");
+ 			let changelog_min = document.getElementById
+ ("changelog-min");
+ 			let changelog_max = document.getElementById
+ ("changelog-max");
+ 			changelog_max.style.display = "none";
+ 			changelog_min.style.display = "block";
+ 			changelog_content.style.display = "block";
+ 			changelog_window.style.width = "400px";
+ 			changelog_header.style.width = "400px";
+ 			changelog_title.style.width = "360px";
+ 		}
 
-		function maximizeWindow(screensize) {
-			let changelog_window = document.getElementById("changelog-window");
-			let changelog_content = document.getElementById("changelog-content");
-			let changelog_header = document.getElementById("changelog-header");
-			let changelog_title = document.getElementById("changelog-title");
-			let changelog_min = document.getElementById("changelog-min");
-			let changelog_max = document.getElementById("changelog-max");
-      if (screensize.matches) {
-        changelog_max.style.display = "none";
-        changelog_min.style.display = "block";
-        changelog_content.style.display = "block";
-        changelog_window.style.width = "350px";
-        changelog_header.style.width = "350px";
-        changelog_title.style.width = "320px";
-      }else{
-  			changelog_max.style.display = "none";
-  			changelog_min.style.display = "block";
-  			changelog_content.style.display = "block";
-        changelog_window.style.width = "400px";
-        changelog_header.style.width = "400px";
-        changelog_title.style.width = "360px";
+ 		function minimizeWindow() {
+ 			let changelog_window = document.getElementById
+ ("changelog-window");
+ 			let changelog_content = document.getElementById
+ ("changelog-content");
+ 			let changelog_header = document.getElementById
+ ("changelog-header");
+ 			let changelog_title = document.getElementById
+ ("changelog-title");
+ 			let changelog_min = document.getElementById
+ ("changelog-min");
+ 			let changelog_max = document.getElementById
+ ("changelog-max");
+ 			changelog_min.style.display = "none";
+ 			changelog_content.style.display = "none";
+ 			changelog_max.style.display = "block";
+ 			changelog_title.style.width = "117px";
+ 			changelog_header.style.width = "157px";
+ 		    changelog_window.style.width = "157px";
+ 		}
 
-      }
-		}
+ 	 </script>
+ 		<style>
+ 			  .modal  {
+ 				position: absolute;
+ 				display: block;
+ 				z-index: 100000;
+ 				left: 0;
+ 				top: 0;
+ 				width: 100%;
+ 				/* Full width */
+ 					height: 100%;
+ 				/* Full height */
+ 					overflow: auto;
+ 				/* Enable scroll if needed */
+ 					background-color: rgb(0,0,0);
+ 				/* Fallback color */
+ 					background-color: rgba(0,0,0,0.4);
+ 				/* Black w/ opacity */
+ 					  }
 
-		function minimizeWindow(screensize) {
-			let changelog_window = document.getElementById("changelog-window");
-			let changelog_content = document.getElementById("changelog-content");
-			let changelog_header = document.getElementById("changelog-header");
-			let changelog_title = document.getElementById("changelog-title");
-			let changelog_min = document.getElementById("changelog-min");
-			let changelog_max = document.getElementById("changelog-max");
-      if (screensize.matches) {
-        changelog_min.style.display = "none";
-  			changelog_content.style.display = "none";
-  			changelog_max.style.display = "block";
-  			changelog_title.style.width = "127px";
-  			changelog_header.style.width = "167px";
-  		  changelog_window.style.width = "167px";
-      }else{
-  			changelog_min.style.display = "none";
-  			changelog_content.style.display = "none";
-  			changelog_max.style.display = "block";
-  			changelog_title.style.width = "127px";
-  			changelog_header.style.width = "167px";
-  		  changelog_window.style.width = "167px";
-      }
-		}
-	 </script>
-		<style>
-			  .modal  {
-				position: absolute;
-				display: block;
-				z-index: 100000;
-				left: 0;
-				top: 0;
-				width: 100%;
-				/* Full width */
-					height: 100%;
-				/* Full height */
-					overflow: auto;
-				/* Enable scroll if needed */
-					background-color: rgb(0,0,0);
-				/* Fallback color */
-					background-color: rgba(0,0,0,0.4);
-				/* Black w/ opacity */
-					  }
+ 			  .changelog-window  {
+ 				box-shadow: 0 6px 12px rgba(0, 0, 0, 0.176);
+ 				width: 400px;
+ 				position: absolute;
+ 				bottom: 25px;
+ 				margin: 60px 10px 30px 0px;
+ 				margin-left: 0px;
+ 				z-index: 1000;
+ 			  }
+ 			  .changelog-title  {
+ 				width: 360px;
+ 			  }
 
-			  .changelog-window  {
-				box-shadow: 0 6px 12px rgba(0, 0, 0, 0.176);
-				width: 400px;
-				position: absolute;
-				bottom: 25px;
-				left: 0;
-				margin: 60px 10px 30px 0px;
-				z-index: 1000;
-			  }
-			  .changelog-title  {
-				width: 360px;
-			  }
+ 			  .changelog-header  {
+ 				background-color: rgb(0, 102, 136);
+ 				color: #fff;
+ 				padding: 8px;
+ 				font-size: 13px;
+ 				display: flex;
+ 			  }
 
-			  .changelog-header  {
-				background-color: rgb(0, 102, 136);
-				color: #fff;
-				padding: 8px;
-				font-size: 13px;
-				display: flex;
-			  }
+ 			  .changelog-min, .changelog-remove  {
+ 				cursor: pointer;
+ 				margin-left: 5px;
+ 			  }
 
-			  .changelog-min, .changelog-remove  {
-				cursor: pointer;
-				margin-left: 5px;
-			  }
+ 			  .changelog-max  {
+ 				cursor: pointer;
+ 				margin-left: 5px;
+ 				display: none;
+ 			  }
 
-			  .changelog-max  {
-				cursor: pointer;
-				margin-left: 5px;
-				display: none;
-			  }
+ 			  .changelog-content  {
+ 				max-height: 550px;
+ 				min-height: 250px;
+ 				overflow-y: auto;
+ 				overflow-x: hidden;
+ 				padding: 10px;
+ 				font-size: 12px;
+ 				background-color: #fff;
+ 				color: rgb(119, 119, 119);
+ 			  }
 
-			  .changelog-content  {
-				max-height: 300px;
-				overflow-y: auto;
-				overflow-x: hidden;
-				padding: 10px;
-				font-size: 12px;
-				background-color: #fff;
-				color: rgb(119, 119, 119);
-			  }
+ 			  dt  {
+ 				font-family: sans-serif;
+ 				font-size: 13px;
+ 			  }
 
-			  dt  {
-				font-family: sans-serif;
-				font-size: 13px;
-			  }
+ 			  dd  {
+ 				margin-bottom: 15px;
+ 			  }
 
-			  dd  {
-				margin-bottom: 15px;
-			  }
+ 			  .tg
+ {border-collapse:collapse;border-spacing:0;width:100%}
+ 			  .tg td{font-family:Arial,
+ sans-serif;font-size:11px;padding:5px
+ 5px;border-style:solid;border-width:0px;overflow:hidden;word-break:normal}
+ 			  .tg th{font-family:Arial,
+ sans-serif;font-size:11px;font-weight:normal;padding:5px
+ 5px;border-style:solid;border-width:0px;overflow:hidden;word-break:normal}
+ 			  .tg .tg-ud0w {font-size:11px;font-family:Arial,
+ Helvetica, sans-serif !important;color:#006688}
+ 			  .tg-031e a{font-size:11px;font-family:Arial, Helvetica,
+ sans-serif !important;color:#006688 !important}
 
-       @media only screen and (min-device-width : 0px) and (max-device-width: 500px) {
-      .changelog-window,.changelog-header {
-       width: 350px;
-        }
-      .changelog-title{
-      width:320px;
-      }
-      }
+ 			  .accordion_info {
+ 			  background-color: rgb(0, 102, 136);
+ 			  color: white;
+ 			  cursor: pointer;
+ 			  padding: 8px;
+ 			  width: 100%;
+ 			  border: none;
+ 			  text-align: left;
+ 			  outline: none;
+ 			  font-size: 15px;
+ 			  transition: 0.4s;
+ 			  margin-bottom: 3px;
+ 			}
 
+ 			.active_info, .accordion_info:hover {
+ 			  background-color: #2b8cbe;
+ 			}
 
+ 			.accordion_info:after {
+ 			  content: '\002B';
+ 			  color: white;
+ 			  font-weight: bold;
+ 			  float: right;
+ 			  margin-left: 5px;
+ 			}
 
-    </style>
-    <!-- Latest compiled and minified CSS -->
- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+ 			.active_info:after {
+ 			  content: "\2212";
+ 			}
 
- <!-- jQuery library -->
- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-
- <!-- Latest compiled JavaScript -->
- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>   <!-- Ende fuer Hinweis -->
-    <title>Geoportal</title>
-
-
-</head>
-<body>
-    <div class="lgv-container">
-        <div id="loader"><img src="../../../lgv-config/img/ajax-loader.gif"></div>
-        <!-- Hack um die BildschirmauflÃ¶sung zu bekommen -->
-        <div id='dpidiv' style='height: 1in; left: -100%; position: absolute; top: -100%; width: 1in;'></div>
-        <div id="popup"></div>
-        <!-- <div id="gfipopup"></div> -->
-        <nav id="main-nav" class="navbar navbar-default" role="navigation">
-            <div class="container-fluid">
-                <div id="navbarRow" class="row">
-                    <div class="navbar-header">
-                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                            <span class="sr-only">Navigation ein-/ausblenden</span>
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                        </button>
-                    </div>
-                    <div class="collapse navbar-collapse">
-                        <ul class="nav-menu" id="root">
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </nav>
-        <div id="map"></div>
-
-	  <!-- div changelog -->
-      <div class="changelog-window" id="changelog-window">
-        <div class="changelog-header" id="changelog-header">
-          <div class="changelog-title" id="changelog-title"  data-toggle="tooltip" data-placement="bottom" title="Was finde ich wo?">Was finde ich wo?</div><div class="glyphicon glyphicon-unchecked pull-right changelog-max" id="changelog-max" onclick="maximizeWindow(screensize);" data-toggle="tooltip" data-placement="bottom" title="Maximieren"></div><div class="glyphicon glyphicon-minus pull-right changelog-min" id="changelog-min" onclick="minimizeWindow(screensize);" data-toggle="tooltip" data-placement="bottom" title="Minimieren"></div><div class="glyphicon glyphicon-remove pull-right changelog-remove" id="changelog-remove" onclick="hideWindow();" data-toggle="tooltip" data-placement="bottom" title="Schließen"></div>
-        </div>
-        <div class="changelog-content" id="changelog-content">
-          <p>
-		  <div style="text-align:center">
-
-		   <h4>
-            <b>Geoportal </b>
-          </h4>
-		  </div>
-          <br>
-          <dl>
-            <dd>
-              Im rechten oberen Suchdialog können Sie gezielt nach Adressen suchen.<br>
-			  Beim Klicken auf Objekte innerhalb der Karte erhalten Sie zusätzliche Informationen. Bei Mehrfachtreffer können Sie mit den Pfeil-Buttons <span class="glyphicon glyphicon-chevron-left"></span><span class="glyphicon glyphicon-chevron-right"></span> durch die Ergebnisse navigieren.
-			  <br><br>
-			  <b>Menüpunkte:</b><br>
-			  <br>
-              <b><span class="glyphicon glyphicon-folder-open"></span> Themen</b><br>
-			  Hier können Sie durch Anklicken der Themen die Darstellung der Daten steuern. Unter dem Unterpunkt Ausgewählte Themen können Sie auch per Zahnrad-Button <span class="glyphicon glyphicon-cog"></span> die Deckkraft und Anzeigeihenfolge der Themen einstellen.<br>
-              <br>
-			  <b><span class="glyphicon glyphicon-wrench"></span> Werkzeuge</b><br>
-			  Hier können Sie u. a. nach Flurstücken suchen und drucken.<br>
-			  Beim Kartenfilter erscheint auf der rechten Seite ein Dialog mit dem Sie Fachdaten z. B. die Points of Interestes nach Ihrem Bedarf filtern können.
-              Bitte klicken sie dazu auf den jeweiligen Button, wonach Sie suchen und konkretisieren Sie Ihre Informationen. Ein Dialog erscheint nur wenn das jeweilige Thema aktiviert und sichtbar ist.<br>
-			  <br>
-			  <b><span class="glyphicon glyphicon-book"></span> Legende</b><br>
-			  Hier können Sie sich die Legenden-Beschreibung der angezeigten Daten ansehen.<br>
-			  <br>
-			 <b><span class="glyphicon glyphicon-info-sign"></span> Informationen</b><br>
-			  Hier finden Sie weiterführende Webseiten und die Möglichkeit dieses Infofenster erneut aufzurufen.<br>
-              <br>
-			  <br>
-			  <b>Maßstabsabhängige Anzeige:</b><br>
-			  Einzelne Hintergrundkarten und Fachdaten sind nur in einem bestimmten Maßstabsbereich sichtbar.
-			  Maßstabsabhängige Themen sind außerhalb ihres Bereiches ausgegraut im Themenbaum dargestellt.
-			  Die Anzeige der ausgewählten maßstabsabhängigen Themen kann durch Zoomen gesteuert werden.
-            </dd>
-          </dl>
-          </p>
-        </div>
-      </div>
-      <!-- Ende div changelog -->
+ 			.panel_info {
+ 			  padding: 0 18px;
+ 			  background-color: white;
+ 			  max-height: 0;
+ 			  overflow: hidden;
+ 			  transition: max-height 0.2s ease-out;
+ 			}
 
 
-		<script type="text/javascript">
-				// Workaround for hiding symbol. (Didnt work in Edge)
-				let changelog_max = document.getElementById("changelog-max");
-				changelog_max.style.display = "none";
-		</script>
-    </div>
-</body>
+     </style>
+     <!-- Ende fuer Hinweis -->
+     <title>Baulandkataster</title>
+
+     <link rel="stylesheet" href="../../../../mp/css/style.css">
+
+ </head>
+ <body>
+     <div class="lgv-container">
+         <div id="loader"><img
+ src="../../../lgv-config/img/ajax-loader.gif"></div>
+         <!-- Hack um die BildschirmauflÃ¶sung zu bekommen -->
+         <div id='dpidiv' style='height: 1in; left: -100%; position:
+ absolute; top: -100%; width: 1in;'></div>
+         <div id="popup"></div>
+         <!-- <div id="gfipopup"></div> -->
+         <nav id="main-nav" class="navbar navbar-default" role="navigation">
+             <div class="container-fluid">
+                 <div id="navbarRow" class="row">
+                     <div class="navbar-header">
+                         <button type="button" class="navbar-toggle"
+ data-toggle="collapse" data-target=".navbar-collapse">
+                             <span class="sr-only">Navigation
+ ein-/ausblenden</span>
+                             <span class="icon-bar"></span>
+                             <span class="icon-bar"></span>
+                             <span class="icon-bar"></span>
+                         </button>
+                     </div>
+                     <div class="collapse navbar-collapse">
+                         <ul class="nav-menu" id="root">
+                         </ul>
+                     </div>
+                 </div>
+             </div>
+         </nav>
+         <div id="map"></div>
+
+ 	  <!-- div changelog -->
+       <div class="changelog-window" id="changelog-window">
+         <div class="changelog-header" id="changelog-header">
+           <div class="changelog-title" id="changelog-title"
+ data-toggle="tooltip" data-placement="bottom"
+ title="Informationen">Informationen</div><div class="glyphicon
+ glyphicon-unchecked pull-right changelog-max" id="changelog-max"
+ onclick="maximizeWindow();" data-toggle="tooltip" data-placement="bottom"
+ title="Maximieren"></div><div class="glyphicon glyphicon-minus pull-right
+ changelog-min" id="changelog-min" onclick="minimizeWindow();"
+ data-toggle="tooltip" data-placement="bottom" title="Minimieren"></div><div
+ class="glyphicon glyphicon-remove pull-right changelog-remove"
+ id="changelog-remove" onclick="hideWindow();" data-toggle="tooltip"
+ data-placement="bottom" title="Schließen"></div>
+         </div>
+         <div class="changelog-content" id="changelog-content">
+           <p>
+ 		  <div style="text-align:center">
+
+ 		   <h7>
+             <b>Baulandkataster </b>
+           </h7>
+ 		  </div>
+ 		  <br>
+ 		  <button class="accordion_info">Kurzanleitung</button>
+ 		  <div class="panel_info">
+ 			  <br>
+               Im rechten oberen Suchdialog können Sie gezielt nach Adressen
+ suchen.<br>
+ 			  Auf der rechten Seite können Sie die Standorte nach
+ Ihrem Bedarf filtern.
+               Bitte klicken Sie dazu auf den jeweiligen Button, wonach Sie
+ suchen und konkretisieren Sie Ihre Informationen (z.B. Flächengröße).Beim
+ Klicken auf einen Standort innerhalb der Karte erhalten Sie zusätzliche
+ Informationen. Bei Mehrfachtreffern können Sie mit den Pfeil-Buttons <span
+ class="glyphicon glyphicon-chevron-left"></span><span class="glyphicon
+ glyphicon-chevron-right"></span> durch die Ergebnisse navigieren.<br>
+ 			  <br>
+ 			  <b>Menüpunkte:</b><br>
+ 			  <br>
+               <b><span class="glyphicon glyphicon-folder-open"></span>
+ Karten und Informationen</b><br>
+ 			  Hier können Sie durch Anklicken der Karten die
+ Darstellung der Daten steuern. Unter dem Unterpunkt Ausgewählte Themen
+ können Sie auch per Zahnrad-Button <span class="glyphicon
+ glyphicon-cog"></span> die Deckkraft und Anzeigereihenfolge der Themen
+ einstellen.<br>
+               <br>
+ 			  <b><span class="glyphicon glyphicon-wrench"></span>
+ Werkzeuge</b><br>
+ 			  Hier können Sie u. a. messen, zeichnen, drucken.<br>
+ 			  <br>
+ 			  <b><span class="glyphicon glyphicon-search"></span>
+ Suche</b><br>
+ 			  Hier können Sie nach allen Flächen, mindergenutzte
+ Flächen und Baulücken und deren unterschiedlichen Attributen (z. B. der
+ Flächengröße) filtern.
+ 			  <br>
+ 			  <b><span class="glyphicon glyphicon-book"></span>
+ Legende</b><br>
+ 			  Hier können Sie sich die Legenden-Beschreibung der
+ angezeigten Daten ansehen.<br>
+ 			  <br>
+ 			  <b><span class="glyphicon glyphicon-info-sign"></span>
+ Wer hilft mir weiter?</b><br>
+ 			   Hier finden Sie weiterführende Webseiten und die
+ Möglichkeit dieses Infofenster erneut aufzurufen.<br>
+               <br>
+ 			  <br>
+ 			  <b>Maßstabsabhängige Anzeige:</b><br>
+ 			  Einzelne Hintergrundkarten und Fachdaten sind nur in
+ einem bestimmten Maßstabsbereich sichtbar.
+ 			  Maßstabsabhängige Themen sind außerhalb ihres Bereiches
+ ausgegraut im Themenbaum dargestellt.
+ 			  Die Anzeige der ausgewählten maßstabsabhängigen Themen
+ kann durch Zoomen gesteuert werden.
+             </dd>
+           </dl>
+           </p>
+           </div>
+ 		  <button class="accordion_info">Allgemeine
+ Informationen</button>
+ 		  <div class="panel_info">
+ 		  <br>
+
+           <dl>
+             <dd>
+ 			  <br>
+ 		  </div>
+ 		<button class="accordion_info" id="bland_info">Information
+ Baulandkataster</button>
+ 		<div class="panel_info">
+ 			<br>
+ 		    <p>Das Baulandkataster e
+ Informationen beispielsweise zu Altlasten.</p>
+ 			<p>Es gibt verschiedene Möglichkeiten nach Grundstücken
+ zu suchen. Zum einen kann nach Lage im Stadtgebiet gesucht werden.  Zum
+ anderen besteht die Möglichkeit, nach Größe des Grundstücks zu suchen.
+ 			So kann man sich zum Beispiel gezielt über Objekte in
+ einer Größe von 300 bis 400 m² im Stadtteil Fischeln informieren.
+ 			Nach Auswahl eines Objektes wird ein Datenblatt mit
+ ersten Angaben und Hinweisen angezeigt. </p>
+ 			<p>Die Angaben werden ohne Gewähr auf Richtigkeit
+ gemacht. Eine Garantie auf Bebaubarkeit der Grundstücke wird mit dem
+ Hinweis im Baulandkataster nicht gegeben. Das Baulandkataster wird
+ wöchentlich aktualisiert.</p>
+ 		    <p>Auskünfte und Hilfestellung zu Fragen über die
+ bauordnungsrechtliche Zulässigkeit von Bauvorhaben erhalten Sie beim
+ Fachbereich 63 - Bauaufsicht.</p>
+ 		    <p>Bei Vorliegen eines berechtigten Interesses erhalten Sie
+ in Einzelfällen Angaben zum Eigentümer eines bestimmten Grundstücks in der
+ Katasterauskunft des Fachbereiches 62 - Vermessungs- und Katasterwesen.</p>
+ 			<br>
+ 		</div>
+ 		</div>
+       </div>
+       <!-- Ende div changelog -->
+
+ 		<script type="text/javascript">
+ 				// Workaround for hiding symbol. (Didnt work in
+ Edge)
+ 				let changelog_max = document.getElementById
+ ("changelog-max");
+ 				changelog_max.style.display = "none";
+
+ 				// Accordion functionality in info window
+ 				var acc = document.getElementsByClassName
+ ("accordion_info");
+ 				var i;
+
+ 				for (i = 0; i < acc.length; i++) {
+ 				  acc[i].addEventListener("click", function() {
+ 					this.classList.toggle("active_info");
+ 					var panel = this.nextElementSibling;
+ 					if (panel.style.maxHeight) {
+ 					  panel.style.maxHeight = null;
+ 					} else {
+ 					  panel.style.maxHeight = panel.scrollHeight
+ + "px";
+ 					}
+ 				  });
+ 				}
+
+ 				 document.getElementById("bland_info").click();
+ 		</script>
+
+
+     </div>
+ </body>
 </html>
