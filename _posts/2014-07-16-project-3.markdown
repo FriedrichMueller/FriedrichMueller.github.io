@@ -1,0 +1,11 @@
+---
+layout: default
+title: Contribution
+modal-id: 3
+date: 2015-01-16
+img: circus.png
+alt: image-alt
+project-date: January 2015
+category: Small project contribution
+description: A very nice project from a sympathic lithuanian company. It combines open environmental data with real estate information. Because I had also a similiar idea for a project (deals with real estate offers and environmental information like noise level, leisure activities etc.)  <a href="https://github.com/SIIGroupMHSRY/SIIproject"><i class='fa fa-github-square'></i> Project on Github </a> I was really stoked about the PlaceIlive.com project. After a nice skype discussion I made a small contribution for their homepage. <br>Visit <a href="http://placeilive.com/">placeilive.com</a> 
+---

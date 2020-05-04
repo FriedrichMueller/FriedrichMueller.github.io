@@ -1,0 +1,11 @@
+---
+layout: default
+title: A Multimodal System In Urban Planning Context
+modal-id: 2
+date: 2015-02-17
+img: cake.png
+alt: image-alt
+project-date: 2013/2014
+category: WebGIS Development, Sensor,HCI
+description: A multimodal WebGIS for an urban planning scenario that can be controlled by voice commands and predefined gestures. During the implementation different speech and gesture recognition frameworks were tested. The final version was realized with Google Speech API and Microsoft Kinect <br><a href="https://github.com/ChristopherStephan/IWGI-Speech"><i class='fa fa-github-square'></i> Project on Github </a></br>
+---
