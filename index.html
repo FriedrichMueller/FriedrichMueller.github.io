@@ -11,10 +11,8 @@
 
   <script type="text/javascript">
  		function showWindow() {
- 			let info_window = document.getElementById
- ("changelog-window");
- 			let changelog_content = document.getElementById
- ("changelog-content");
+ 			let info_window = document.getElementById("changelog-window");
+ 			let changelog_content = document.getElementById("changelog-content");
  			info_window.style.display = "block";
  			if (changelog_content.style.display == "none"){
  				maximizeWindow();
@@ -22,24 +20,17 @@
  		}
 
  		function hideWindow() {
- 			let info_window = document.getElementById
- ("changelog-window");
+ 			let info_window = document.getElementById("changelog-window");
  			info_window.style.display = "none";
  		}
 
  		function maximizeWindow() {
- 			let changelog_window = document.getElementById
- ("changelog-window");
- 			let changelog_content = document.getElementById
- ("changelog-content");
- 			let changelog_header = document.getElementById
- ("changelog-header");
- 			let changelog_title = document.getElementById
- ("changelog-title");
- 			let changelog_min = document.getElementById
- ("changelog-min");
- 			let changelog_max = document.getElementById
- ("changelog-max");
+ 			let changelog_window = document.getElementById("changelog-window");
+ 			let changelog_content = document.getElementById("changelog-content");
+ 			let changelog_header = document.getElementById("changelog-header");
+ 			let changelog_title = document.getElementById("changelog-title");
+ 			let changelog_min = document.getElementById("changelog-min");
+ 			let changelog_max = document.getElementById("changelog-max");
  			changelog_max.style.display = "none";
  			changelog_min.style.display = "block";
  			changelog_content.style.display = "block";
@@ -49,18 +40,12 @@
  		}
 
  		function minimizeWindow() {
- 			let changelog_window = document.getElementById
- ("changelog-window");
- 			let changelog_content = document.getElementById
- ("changelog-content");
- 			let changelog_header = document.getElementById
- ("changelog-header");
- 			let changelog_title = document.getElementById
- ("changelog-title");
- 			let changelog_min = document.getElementById
- ("changelog-min");
- 			let changelog_max = document.getElementById
- ("changelog-max");
+ 			let changelog_window = document.getElementById("changelog-window");
+ 			let changelog_content = document.getElementById("changelog-content");
+ 			let changelog_header = document.getElementById("changelog-header");
+ 			let changelog_title = document.getElementById("changelog-title");
+ 			let changelog_min = document.getElementById("changelog-min");
+ 			let changelog_max = document.getElementById("changelog-max");
  			changelog_min.style.display = "none";
  			changelog_content.style.display = "none";
  			changelog_max.style.display = "block";
@@ -350,14 +335,12 @@
        <!-- Ende div changelog -->
 
  		<script type="text/javascript">
- 			
- 				let changelog_max = document.getElementById
- ("changelog-max");
+
+ 				let changelog_max = document.getElementById("changelog-max");
  				changelog_max.style.display = "none";
 
  				// Accordion functionality in info window
- 				var acc = document.getElementsByClassName
- ("accordion_info");
+ 				var acc = document.getElementsByClassName("accordion_info");
  				var i;
 
  				for (i = 0; i < acc.length; i++) {
@@ -367,8 +350,7 @@
  					if (panel.style.maxHeight) {
  					  panel.style.maxHeight = null;
  					} else {
- 					  panel.style.maxHeight = panel.scrollHeight
- + "px";
+ 					  panel.style.maxHeight = panel.scrollHeight+ "px";
  					}
  				  });
  				}
