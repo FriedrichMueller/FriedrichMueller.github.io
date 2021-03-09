@@ -1,7 +1,7 @@
 			// create the map object and set the cooridnates of the initial view:
 			var layer = new L.StamenTileLayer("toner");
 			var map = new L.Map("map", {
-				center: new L.LatLng(47.644952,9.396864),
+				center: new L.LatLng(53.43033, 9.86388),
 				zoom: 8
 			});
 			map.addLayer(layer);
