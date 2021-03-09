@@ -4,31 +4,16 @@
 			"type" : "Feature",
 			"properties" : {
 				"id" : 1,
-				"chapter" : "Bodensee",
+				"chapter" : "Hamburg",
 				"zoom" : 10,
-				"image" : "img/Bod.png",
-				"source-credit" : "Satellitenaufnahme vom Bodensee * from Nasa World Wind - Free Satellite Image  by https://commons.wikimedia.org/wiki/User:Ulamm on Wikipedia under Public Domain (https://en.wikipedia.org/wiki/en:Public_domain)",
-				"source-link" : "https://de.wikipedia.org/wiki/Bodensee#/media/File:Bodensee_satellit%2Btext.png",
-				"description" : "Deepest lake in Germany max. ~251m"
+				"image" : "https://de.wikipedia.org/wiki/Hasselbrack#/media/Datei:Hasselbrack-Stein_DSCN0857_small.JPG",
+				"source-credit" : "Gipfelstein am Hasselbrack by https://commons.wikimedia.org/wiki/User:TraceyR on Wikipedia under Creative Commons Attribution-Share Alike 3.0 Unported",
+				"source-link" : "https://de.wikipedia.org/wiki/Hasselbrack#/media/Datei:Hasselbrack-Stein_DSCN0857_small.JPG",
+				"description" : "Gipfelstein am Hasselbrack, die höchste Erhebung im Bundesland Hamburg sowie Geocache (vorne rechts); Dieser Stein wurde in 2013 aufgestellt. Die Inschrift lautet: Hasselbrack/116m/Höchster Punkt/Hamburgs"
 			},
 			"geometry" : {
 				"type" : "Point",
-				"coordinates" : [9.396864,47.644952]
-			}
-		}, {
-			"type" : "Feature",
-			"properties" : {
-				"id" : 2,
-				"chapter" : "Höchsten",
-				"zoom" : 17,
-				"image" : "img/hoe.jpg",
-				"source-credit" : "Source: Blick vom Höchsten über Deggenhausertal zum Bodensee by Flodur63   on Wikipedia under CC BY-SA 4.0(https://creativecommons.org/licenses/by-sa/4.0)",
-				"source-link" : "https://de.wikipedia.org/wiki/H%C3%B6chsten#/media/File:Illmensee,_SIG_-_H%C3%B6chsten_-_Deggenhausertal,_Bodensee_v_NO.jpg",
-				"description" : " View from Höchsten over Deggenhausertal to Bodensee"
-			},
-			"geometry" : {
-				"type" : "Point",
-				"coordinates" : [9.402425,47.819171]
+				"coordinates" : [9.86388,53.43033]
 			}
 		}
 	]
