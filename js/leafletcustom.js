@@ -2,7 +2,7 @@
 			var layer = new L.StamenTileLayer("toner");
 			var map = new L.Map("map", {
 				center: new L.LatLng(53.43033, 9.86388),
-				zoom: 5
+				zoom: 10
 			});
 			map.addLayer(layer);
 
@@ -101,6 +101,6 @@ $( "#contents" ).scroll(function() {
 
     $('div#container1').addClass("inFocus");
     $('#contents').append("<div class='space-at-the-bottom'><a href='#space-at-the-top'><i class='fa fa-chevron-up'></i></br><small>Top</small></a></div>");
-    map.fitBounds(geojson.getBounds());
+    //map.fitBounds(geojson.getBounds());
     geojson.addTo(map);
   });
