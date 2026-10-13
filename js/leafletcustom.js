@@ -7,7 +7,7 @@
 						    }
 						);
 			var map = new L.Map("map", {
-				center: new L.LatLng(49.5003, 9.407000),
+				center: new L.LatLng(49.5000, 9.407000),
 				zoom: 10
 			});
 			map.addLayer(layer);
