@@ -4,7 +4,7 @@
 			"type" : "Feature",
 			"properties" : {
 				"id" : 1,
-				"chapter" : "Hamburg",
+				"chapter" : "Bad Windsheim",
 				"zoom" : 10,
 				"image" : "https://de.wikipedia.org/wiki/Hasselbrack#/media/Datei:Hasselbrack-Stein_DSCN0857_small.JPG",
 				"source-credit" : "Gipfelstein am Hasselbrack by https://commons.wikimedia.org/wiki/User:TraceyR on Wikipedia under Creative Commons Attribution-Share Alike 3.0 Unported",
@@ -13,7 +13,7 @@
 			},
 			"geometry" : {
 				"type" : "Point",
-				"coordinates" : [9.86388,53.43033]
+				"coordinates" : [10.407000,49.500000]
 			}
 		}
 	]
