@@ -1,5 +1,11 @@
 			// create the map object and set the cooridnates of the initial view:
-			var layer = new L.StamenTileLayer("toner");
+			var layer = L.tileLayer(
+    						'https://tile.openstreetmap.org/{z}/{x}/{y}.png',
+						    {
+						        attribution: '&copy; OpenStreetMap contributors',
+						        maxZoom: 19
+						    }
+						);
 			var map = new L.Map("map", {
 				center: new L.LatLng(53.43033, 9.86388),
 				zoom: 10
