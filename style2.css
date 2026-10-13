@@ -58,6 +58,10 @@ h3 {
     margin-bottom: 0px;
 }
 
+.leaflet-tile {
+    filter: grayscale(100%);
+}
+
 .image-container {
     /* margin + padding = imageContainerMargin in script.js */
     /* Important for scrolling! */
